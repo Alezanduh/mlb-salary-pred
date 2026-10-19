@@ -1,6 +1,110 @@
 import pandas as pd
 
 data = [
+    {"Year": 2005, "PLAYOFF_TEAMS": "CHW/chicago-white-sox", "NAME": "CHW"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "LAA/los-angeles-angels", "NAME": "LAA"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "BOS/boston-red-sox", "NAME": "BOS"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "ATL/atlanta-braves", "NAME": "ATL"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "SDP/san-diego-padres", "NAME": "SDP"},
+    {"Year": 2005, "PLAYOFF_TEAMS": "HOU/houston-astros", "NAME": "HOU"},
+
+    # 2006
+    {"Year": 2006, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "MIN/minnesota-twins", "NAME": "MIN"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "OAK/oakland-athletics", "NAME": "OAK"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "DET/detroit-tigers", "NAME": "DET"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "NYM/new-york-mets", "NAME": "NYM"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "LAD/los-angeles-dodgers", "NAME": "LAD"},
+    {"Year": 2006, "PLAYOFF_TEAMS": "SDP/san-diego-padres", "NAME": "SDP"},
+
+    # 2007
+    {"Year": 2007, "PLAYOFF_TEAMS": "BOS/boston-red-sox", "NAME": "BOS"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "CLE/cleveland-indians", "NAME": "CLE"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "LAA/los-angeles-angels", "NAME": "LAA"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "ARI/arizona-diamondbacks", "NAME": "ARI"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "PHI/philadelphia-phillies", "NAME": "PHI"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "CHC/chicago-cubs", "NAME": "CHC"},
+    {"Year": 2007, "PLAYOFF_TEAMS": "COL/colorado-rockies", "NAME": "COL"},
+
+    # 2008
+    {"Year": 2008, "PLAYOFF_TEAMS": "TBD/tampa-bay-rays", "NAME": "TBD"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "CHW/chicago-white-sox", "NAME": "CHW"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "LAA/los-angeles-angels", "NAME": "LAA"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "BOS/boston-red-sox", "NAME": "BOS"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "PHI/philadelphia-phillies", "NAME": "PHI"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "CHC/chicago-cubs", "NAME": "CHC"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "LAD/los-angeles-dodgers", "NAME": "LAD"},
+    {"Year": 2008, "PLAYOFF_TEAMS": "MIL/milwaukee-brewers", "NAME": "MIL"},
+
+    # 2009
+    {"Year": 2009, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "MIN/minnesota-twins", "NAME": "MIN"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "LAA/los-angeles-angels", "NAME": "LAA"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "BOS/boston-red-sox", "NAME": "BOS"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "PHI/philadelphia-phillies", "NAME": "PHI"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "LAD/los-angeles-dodgers", "NAME": "LAD"},
+    {"Year": 2009, "PLAYOFF_TEAMS": "COL/colorado-rockies", "NAME": "COL"},
+
+    # 2010
+    {"Year": 2010, "PLAYOFF_TEAMS": "TBD/tampa-bay-rays", "NAME": "TBD"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "MIN/minnesota-twins", "NAME": "MIN"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "TEX/texas-rangers", "NAME": "TEX"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "PHI/philadelphia-phillies", "NAME": "PHI"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "CIN/cincinnati-reds", "NAME": "CIN"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "SFG/san-francisco-giants", "NAME": "SFG"},
+    {"Year": 2010, "PLAYOFF_TEAMS": "ATL/atlanta-braves", "NAME": "ATL"},
+
+    # 2011
+    {"Year": 2011, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "DET/detroit-tigers", "NAME": "DET"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "TEX/texas-rangers", "NAME": "TEX"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "TBD/tampa-bay-rays", "NAME": "TBD"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "PHI/philadelphia-phillies", "NAME": "PHI"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "MIL/milwaukee-brewers", "NAME": "MIL"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "ARI/arizona-diamondbacks", "NAME": "ARI"},
+    {"Year": 2011, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+
+    # 2012
+    {"Year": 2012, "PLAYOFF_TEAMS": "NYY/new-york-yankees", "NAME": "NYY"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "DET/detroit-tigers", "NAME": "DET"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "OAK/oakland-athletics", "NAME": "OAK"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "BAL/baltimore-orioles", "NAME": "BAL"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "TEX/texas-rangers", "NAME": "TEX"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "WSH/washington-nationals", "NAME": "WSH"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "CIN/cincinnati-reds", "NAME": "CIN"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "SFG/san-francisco-giants", "NAME": "SFG"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "ATL/atlanta-braves", "NAME": "ATL"},
+    {"Year": 2012, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+
+    # 2013
+    {"Year": 2013, "PLAYOFF_TEAMS": "BOS/boston-red-sox", "NAME": "BOS"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "DET/detroit-tigers", "NAME": "DET"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "OAK/oakland-athletics", "NAME": "OAK"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "CLE/cleveland-indians", "NAME": "CLE"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "TBD/tampa-bay-rays", "NAME": "TBD"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "ATL/atlanta-braves", "NAME": "ATL"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "LAD/los-angeles-dodgers", "NAME": "LAD"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "PIT/pittsburgh-pirates", "NAME": "PIT"},
+    {"Year": 2013, "PLAYOFF_TEAMS": "CIN/cincinnati-reds", "NAME": "CIN"},
+
+    # 2014
+    {"Year": 2014, "PLAYOFF_TEAMS": "BAL/baltimore-orioles", "NAME": "BAL"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "DET/detroit-tigers", "NAME": "DET"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "LAA/los-angeles-angels", "NAME": "LAA"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "OAK/oakland-athletics", "NAME": "OAK"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "KCR/kansas-city-royals", "NAME": "KCR"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "WSH/washington-nationals", "NAME": "WSH"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "STL/st-louis-cardinals", "NAME": "STL"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "LAD/los-angeles-dodgers", "NAME": "LAD"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "PIT/pittsburgh-pirates", "NAME": "PIT"},
+    {"Year": 2014, "PLAYOFF_TEAMS": "SFG/san-francisco-giants", "NAME": "SFG"},
     # 2015
     {"Year": 2015, "PLAYOFF_TEAMS": "KCR/kansas-city-royals", "NAME": "KCR"},
     {"Year": 2015, "PLAYOFF_TEAMS": "TOR/toronto-blue-jays", "NAME": "TOR"},
@@ -147,7 +251,7 @@ data = [
     {"Year": 2025, "PLAYOFF_TEAMS": "ATL/atlanta-braves", "NAME": "ATL"},
     {"Year": 2025, "PLAYOFF_TEAMS": "NYM/new-york-mets", "NAME": "NYM"},
 
-    # 2026 (Provided Data)
+    # 2026 
     {"Year": 2026, "PLAYOFF_TEAMS": "TBD/tampa-bay-rays", "NAME": "TBD"},
     {"Year": 2026, "PLAYOFF_TEAMS": "CLE/cleveland-guardians", "NAME": "CLE"},
     {"Year": 2026, "PLAYOFF_TEAMS": "HOU/houston-astros", "NAME": "HOU"},

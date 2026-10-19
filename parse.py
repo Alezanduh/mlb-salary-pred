@@ -39,3 +39,25 @@ def standardize_names(df, col="name"):
     df = df.copy()
     df[col] = df[col].apply(_fix)
     return df
+
+_ROUNDS = [
+    ("World Series", 4),
+    ("Championship Series", 3),
+    ("Division Series", 2),
+    ("Wild Card", 1),
+]
+
+def parse_postseason(text):
+    """Highest round reached: 0 none, 1 Wild Card, 2 Division Series, 3 LCS, 4 World Series, 5 won World Series."""
+    if not isinstance(text, str) or not text.strip():
+        return 0
+    reached = 0
+    for series in text.split(";"):
+        series = series.strip()
+        for label, level in _ROUNDS:
+            if label in series:
+                if level == 4 and series.startswith("Won"):
+                    level = 5
+                reached = max(reached, level)
+                break
+    return reached
